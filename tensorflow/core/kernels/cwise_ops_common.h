@@ -479,7 +479,9 @@ struct ApproximateEqual<CPUDevice, T> {
 #define REGISTER2(OP, D, N, F, T0, T1) REGISTER(OP, D, N, F, T0)
 #define REGISTER3(OP, D, N, F, T0, T1, T2) REGISTER(OP, D, N, F, T0)
 #define REGISTER4(OP, D, N, F, T0, T1, T2, T3) REGISTER(OP, D, N, F, T0)
-#define REGISTER5(OP, D, N, F, T0, T1, T2, T3, T4) REGISTER(OP, D, N, F, T0)
+#define REGISTER5(OP, D, N, F, T0, T1, T2, T3, T4) \
+    REGISTER(OP, D, N, F, T0) \
+    REGISTER(OP, D, N, F, T1)
 #define REGISTER6(OP, D, N, F, T0, T1, T2, T3, T4, T5) REGISTER(OP, D, N, F, T0)
 #define REGISTER7(OP, D, N, F, T0, T1, T2, T3, T4, T5, T6) \
   REGISTER(OP, D, N, F, T0)
